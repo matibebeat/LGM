@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="index.html">Home: La Grande Maison</a></li>
+            <li><a href="Explore.html">Explore LGM</a></li>
+            <li><a href="book.html">book</a></li>
+            <li><a href="reservations.html">reservations</a></li>
+            <li><a href="map.html">comment venir</a></li>
+            <li><a href="about">About us</a></li>
+        </ul>
+    </header>
+    <h2>Book for a duree </h2>
+    <section>
+        <form action=""id="myform">
+            <fieldset>
+                <legend>renter</legend>
+                <label for="name">Name of the renter:</label>
+                <input type="text" name="name" id="name" placeholder="name">*
+                <label for="email">Email of the renter:</label>
+                <input type="email" name="email" id="email" placeholder="email">*
+                <label for="phone">Phone number of the renter:</label>
+                <input type="tel" name="phone" id="phone" placeholder="phone">*
+            </fieldset>
+            <fieldset>
+                <legend>About the residents</legend>
+                <label for="adults">Number of adults:</label>
+                <input type="number" name="adults" id="adults" min="1" max="10" value="1">
+                <label for="children">Number of children:</label>
+                <input type="number" name="children" id="children" min="0" max="10" value="0">  
+            </fieldset>
+            <fieldset>
+                <legend>dates de réservations</legend>
+                <label for="checkin">Check-in date:</label>
+                <input type="date" name="checkin" id="checkin" value="2021-06-20">
+                <label for="checkout">Check-out date:</label>
+                <input type="date" name="checkout" id="checkout"value="2023-01-05">
+
+            </fieldset>
+            <fieldset>
+                <legend>Supléments</legend>
+                <label for="bed">Extra bed:</label>
+                <input type="checkbox" name="bed" id="bed">
+                <label for="breakfast">Breakfast:</label>
+                <input type="checkbox" name="breakfast" id="breakfast">
+                <label for="dinner">Dinner:</label>
+                <input type="checkbox" name="dinner" id="dinner">
+                <label for="cleaning">cleaning (by BeClean)</label>
+                <input type="checkbox" name="cleaning" id="cleaning">
+            </fieldset>
+            <fieldset>
+                <legend>Comments</legend>
+                <label for="comments">Comments:</label>
+                <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+            </fieldset>
+            <input type="submit" value="Submit">
+            <p ><span id="price">0</span>€</p>
+        </form>
+    </section>
+    <script src="book.js"></script>
+    <footer>
+        <p>La Grande Maison, 2021</p>
+    
+      </footer>
+</body>
+</html>

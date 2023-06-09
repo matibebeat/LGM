@@ -1,0 +1,166 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+
+.wrapper{
+  max-width: 1200px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  top: 0px;
+  padding:0% ;
+}
+.wrapper i{
+  top: 50%;
+  background:#ffff ;
+  height: 46px;
+  width: 46px;
+  position: absolute;
+  text-align: center;
+  line-height: 46px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transform: translateY(-50%);
+}
+
+.wrapper i:first-child{
+  left: -23px;
+  display: none;
+}
+.wrapper i:last-child{
+  right: -23px;
+}
+
+.wrapper .carousel{
+  font-size: 0px;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.carousel.dragging{
+  cursor: grab;
+  scroll-behavior: auto;
+}
+.carousel.dragging img{
+  pointer-events: none;
+}
+
+.carousel img{
+  height: 340px;
+  object-fit: cover;
+  width: calc(100%/3);
+  margin-left: 14px;
+}
+.Carousel img:first-child{
+  margin-left: 0px;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+  background-color: #dde2b0;
+  margin: 0;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+
+}
+section{
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 5%;  
+}
+article{
+  padding-top: 2%;
+  margin: 5%;
+}
+@media screen and (max-width: 900px) {
+  .carousel img{
+    width: calc(100%/2);
+  }
+}
+@media screen and (max-width: 550px) {
+  .carousel img{
+    width: 100%;
+  }
+}
+
+header {
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  color: #ffffff00;
+  padding: 20px;
+  justify-content: center;
+  width: 100%;
+  z-index: 1;
+}
+ul{
+  display: flex;
+  flex-direction: row;
+}
+ul li{
+  list-style: none;
+  padding-left: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #E5EBEA;
+
+}
+ul li a{
+  text-decoration: none;
+  color: #E5EBEA;
+}
+
+h1{
+  color:rgb(75, 99, 99) ;
+  font-size: 150px;
+  text-decoration: underline;
+}
+h2{
+  color:rgb(75, 99, 99) ;
+  font-size: 50px;
+  text-decoration: underline;
+}
+h3{
+  color:rgb(75, 99, 99) ;
+  font-size: 30px;
+  text-decoration: underline;
+}
+.form{
+  font-size: 20px;
+  color: #393D3F;
+  text-align: center;
+  margin-top: 100px;
+  margin-left: 300px;
+}
+
+main{
+  text-align: center;
+}
+
+footer{
+  background-color: #333;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  padding: 5px;
+}
+
+table{
+  margin-left: 300px;
+  margin-top: 50px;
+  border-collapse: collapse;
+  width: 50%;
+  color: #393D3F;
+  font-size: 20px;
+  text-align: center;
+  background-color: rgba(102, 102, 102, 0.5);
+  border-radius: 10px;    
+}
