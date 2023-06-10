@@ -74,6 +74,7 @@ section{
   padding-left: 15%;
   padding-right: 15%;
   padding-top: 5%;  
+  padding-bottom: 15%;
 }
 article{
   padding-top: 2%;
@@ -147,7 +148,7 @@ main{
 
 footer{
   background-color: #333;
-  position: absolute;
+  position: fixed;
   width: 100%;
   bottom: 0;
   padding: 5px;
@@ -163,4 +164,18 @@ table{
   text-align: center;
   background-color: rgba(102, 102, 102, 0.5);
   border-radius: 10px;    
+}
+thead{
+  border: solid 5px #393D3F; 
+}
+th{
+  border: solid 5px #393D3F; 
+
+}
+td{
+  border: solid 2px #393D3F; 
+}
+tr:nth-child(even) {background-color: #f2f2f2}
+td:nth-child(1){
+  font-weight: bold;
 }

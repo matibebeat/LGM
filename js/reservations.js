@@ -46,7 +46,7 @@ for (var i = 0; i < reservations.length; i++) {
         cleaning.style.color = "red"; 
     }
     var price = document.createElement('td');
-    price.textContent = reservations[i].price;
+    price.textContent = reservations[i].price+"€";
     tr.append(id, nom, arrival, departure, guests, email, tel, breakfast, dinner, cleaning, price);
     tbody.appendChild(tr);
 }

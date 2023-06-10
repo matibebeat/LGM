@@ -42,7 +42,7 @@ myform.addEventListener("change", function (e) {
     if (cleaning) {
         price += 2;
     }
-    price+= 40;
+    price += 40;
     price *= days;
     price *= total;
     var prix = document.getElementById("price");
@@ -51,6 +51,9 @@ myform.addEventListener("change", function (e) {
 
 myform.addEventListener("submit", function (e) {
     e.preventDefault();
+    if (!checkvalues()) {
+        return;
+    }
     var name = document.getElementById("name").value;
     console.log(name);
     var email = document.getElementById("email").value;
@@ -79,7 +82,23 @@ myform.addEventListener("submit", function (e) {
     //round the number of days
     days = Math.round(days);
 
-    var price = document.getElementById("price").value;
+    var price = 0;
+    if (bed) {
+        price += 15;
+    }
+    if (breakfast) {
+        price += 5;
+    }
+    if (dinner) {
+        price += 10;
+    }
+    if (cleaning) {
+        price += 2;
+    }
+    price += 40;
+    price *= days;
+    price *= total;
+
     //OPEN the localstorage
     var myStorage = window.localStorage;
     //get the list of reservations
@@ -114,3 +133,35 @@ myform.addEventListener("submit", function (e) {
     window.location.href = "reservations.html";
 
 });
+
+function checkvalues() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var tel = document.getElementById("phone").value;
+
+    var adult_number = document.getElementById("adults").value;
+    var child_number = document.getElementById("children").value;
+    var total = adult_number + child_number;
+
+    var arrival = document.getElementById("checkin").value;
+    var departure = document.getElementById("checkout").value;
+
+    var bed = document.getElementById("bed").checked;
+    var breakfast = document.getElementById("breakfast").checked;
+    var dinner = document.getElementById("dinner").checked;
+    var cleaning = document.getElementById("cleaning").checked;
+
+    if (!name || !email || !tel || !adult_number || !child_number || !arrival || !departure) {
+        alert("Please fill all the fields");
+        return false;
+    }
+    if (total <= 0) {
+        alert("Please enter a valid number of guests");
+        return false;
+    }
+    if (arrival > departure) {
+        alert("Please enter a valid date");
+        return false;
+    }
+    return true;
+}
